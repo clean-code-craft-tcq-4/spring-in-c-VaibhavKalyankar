@@ -11,7 +11,7 @@ TEST_CASE("reports average, minimum and maximum") {
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     struct Stats computedStats = compute_statistics(numberset, setlength);
     float epsilon = 0.001;
-    computedStats.average = NAN;
+    computedStats.average = 0;
     computedStats.max = NAN;
     computedStats.min = NAN;
     
