@@ -27,9 +27,9 @@ TEST_CASE("average is NaN for empty array") {
     computedStats.max = NAN;
     computedStats.min = NAN;
     
-    REQUIRE(computedStats.average == nanf(computedStats.average));
-    REQUIRE(computedStats.max == nanf(computedStats.average));
-    REQUIRE(computedStats.min == nanf(computedStats.average));
+    REQUIRE(computedStats.average == nanf(NAN));
+    REQUIRE(computedStats.max == nanf(NAN));
+    REQUIRE(computedStats.min == nanf(NAN));
    
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
