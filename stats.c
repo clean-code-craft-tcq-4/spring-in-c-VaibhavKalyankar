@@ -1,13 +1,13 @@
 #include "stats.h"
 
-static struct Stats compute_statistics(const float* numberset, int setlength) {
-    static struct Stats s;
+struct Stats compute_statistics(const float* numberset, int setlength) {
+    struct Stats s;
     int total=0;
     s.min = numberset[0];
     s.max = numberset[0];
        for (int i=0;i<setlength;i++)
        {
-           
+           printf("numberset[i]=%f",numberset[i]);
            total = total + numberset[i];
             if(numberset[i] > s.max)
                 s.max = numberset[i];
