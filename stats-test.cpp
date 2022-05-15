@@ -14,9 +14,9 @@ TEST_CASE("reports average, minimum and maximum") {
     
     float epsilon = 0.001;
     printf("avg=%f,max=%f,min=%f",computedStats.average,computedStats.max,computedStats.min);
-    REQUIRE((computedStats.average - 4.525) < epsilon);
-    REQUIRE((computedStats.max - 8.9) < epsilon);
-    REQUIRE((computedStats.min - 1.5) < epsilon);
+    REQUIRE(abs(computedStats.average - 4.525) < epsilon);
+    REQUIRE(abs(computedStats.max - 8.9) < epsilon);
+    REQUIRE(abs(computedStats.min - 1.5) < epsilon);
     
 }
 
