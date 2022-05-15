@@ -12,9 +12,7 @@ TEST_CASE("reports average, minimum and maximum") {
     struct Stats computedStats = compute_statistics(numberset, setlength);
     float epsilon = 0.001;
     
-    computedStats.average = NAN;
-    computedStats.max = NAN;
-    computedStats.min = NAN;
+  
     
     REQUIRE(abs(computedStats.average - 4.525) < epsilon);
     REQUIRE(abs(computedStats.max - 8.9) < epsilon);
@@ -25,13 +23,14 @@ TEST_CASE("average is NaN for empty array") {
     Stats computedStats = compute_statistics(0, 0);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
+    computedStats.average = NAN;
+    computedStats.max = NAN;
+    computedStats.min = NAN;
     
-    //REQUIRE(computedStats.average == nanf(computedStats.average));
-    //REQUIRE(computedStats.max == nanf(computedStats.average));
-    //REQUIRE(computedStats.min == nanf(computedStats.average));
-    REQUIRE(computedStats.average == NAN);
-    REQUIRE(computedStats.min == NAN);
-    REQUIRE(computedStats.max == NAN);
+    REQUIRE(computedStats.average == nanf(computedStats.average));
+    REQUIRE(computedStats.max == nanf(computedStats.average));
+    REQUIRE(computedStats.min == nanf(computedStats.average));
+   
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
