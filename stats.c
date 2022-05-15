@@ -20,10 +20,8 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
                 if(numberset[i] < s.min)
                     s.min = numberset[i];
            }
-
-
-
-        s.average = (total/setlength);
+         s.average = (total/setlength);
+         printf("avg=%f",s.average);
     }
     else
     {
