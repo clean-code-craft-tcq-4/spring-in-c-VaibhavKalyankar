@@ -27,9 +27,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     }
     else
     {
-         computedStats.average = NAN;
-        computedStats.max = NAN;
-        computedStats.min = NAN;
+         s.average = NAN;
+         s.max = NAN;
+         s.min = NAN;
         
     }
     
