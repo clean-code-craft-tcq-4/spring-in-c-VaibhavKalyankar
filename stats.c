@@ -1,10 +1,10 @@
 #include "stats.h"
 
-static struct Stats compute_statistics(const float* numberset, int setlength) {
-    static struct Stats s;
-    s.average = 0;
-    s.min = 0;
-    s.max = 0;
+struct Stats compute_statistics(const float* numberset, int setlength) {
+    struct Stats s;
+    s.average = numberset[0];
+    s.min = numberset[1];
+    s.max = numberset[2];
     return s;
 }
 
