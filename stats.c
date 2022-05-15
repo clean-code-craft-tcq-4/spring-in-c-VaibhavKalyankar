@@ -1,5 +1,6 @@
 #include "stats.h"
 #include <stdio.h>
+#include <math.h>
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
@@ -11,7 +12,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         s.max = numberset[0];
            for (int i=0;i<setlength;i++)
            {
-               printf("numberset[i]=%f",numberset[i]);
+               //printf("numberset[i]=%f",numberset[i]);
                total = total + numberset[i];
                 if(numberset[i] > s.max)
                     s.max = numberset[i];
